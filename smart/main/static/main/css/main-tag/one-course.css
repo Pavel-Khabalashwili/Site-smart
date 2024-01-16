@@ -101,9 +101,9 @@
 }
 .service__title{
     margin-bottom: 72px;
-    padding-left: 125px;
+    /* padding-left: 125px;
     background-image: url("../../img/one-course/one-ourse-arrow.svg");
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     background-position: center left;
 }
 .service__descr{

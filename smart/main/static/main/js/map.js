@@ -32,3 +32,15 @@ function init() {
 
 ymaps.ready(init);
 
+// Обработчик события на изменение значения в select
+let select = document.querySelector('#select-city');
+select.addEventListener('change', function() {
+  let city = this.value;
+  let geocoder = ymaps.geocode(city);
+
+  geocoder.then(function(res) {
+    let coords = res.geoObjects.get(0).geometry.getCoordinates();
+    setCenter(coords);
+  });
+});
+

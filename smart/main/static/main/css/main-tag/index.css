@@ -321,6 +321,7 @@
     width: 1692px;
     height: 630px;
     background-image: url('../../img/index/application/application-circles.svg');
+    z-index: -2 ;
 }
 
 .application__title {
@@ -334,7 +335,7 @@
     display: flex;
 }
 .form-application__tel {
-    padding: 20px 74px 21px 32px;
+    padding: 20px 30px 21px 32px;
     font-family: SF Pro Display;
     font-size: 20px;
     font-style: normal;

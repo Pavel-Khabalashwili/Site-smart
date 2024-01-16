@@ -53,7 +53,7 @@
                                             {{ course.anons }}
                                         </p>
                                     </div>
-                                     <button class="educate__btn --green-light-green">{{ course.title }}</button>
+                                    <a href="{% url 'course-detail' course.title %}" class="educate__btn --green-light-green">{{ course.title }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
@@ -61,45 +61,7 @@
 
                     </div>
 
-                    <!-- Модальое окно -->
-                    <div class="modal">
-                        <div class="modal__box animate__animated ">
-
-                            <!-- Кнопка закрытия модального окна -->
-                            <div class="modal__btn-wrapper services__btn-close-pos animate__animated animate__delay-1s">
-                                <button class="modal__close-btn btn btn-reset">
-                                    <div class="closeModal"></div>
-                                </button>
-                            </div>
-
-                            <div class="modal__wrapper ">
-                                <h3 class="modal__title section-title">Записаться</h3>
-
-
-                                <!-- Формы обратной связи -->
-                                <form class="form js-form-connection animate__animated animate__delay-1s">
-
-                                    <!-- Hidden Required Fields -->
-                                    <input type="hidden" name="project_name" value="GENESIS">
-                                    <input type="hidden" name="admin_email" value="mvke_money@mail.ru">
-                                    <input type="hidden" name="form_subject" value="Footer contacts spam form">
-                                    <!-- END Hidden Required Fields -->
-
-                                    <div class="just-validate-tooltip-container">
-                                        <input  type="text" name ="name" data-validate-field="name" placeholder = "Ваше имя"    class="form__input service__descr">
-                                    </div>
-
-                                    <div class="just-validate-tooltip-container">
-                                        <input  type="tel"  name = "tel" data-validate-field="tel"  placeholder = "Ваш телефон" class="form__input section-descr">
-                                    </div>
-
-                                    <button type="submit" class="form__btn btn btn-reset fcs-ripple-out ">Оставить заявку</button>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                    {% include 'main/modal.html' %}
             </section>
 
             <!-- Дошколльное образование -->
@@ -121,7 +83,7 @@
                                             {{ course.anons }}
                                         </p>
                                     </div>
-                                    <button class="educate__btn --beige-yellow">{{ course.title }}</button>
+                                    <a href="{% url 'course-detail2' course.title %}" class="educate__btn --beige-yellow">{{ course.title }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
@@ -150,7 +112,7 @@
                                             {{ course.anons }}
                                         </p>
                                     </div>
-                                    <button class="educate__btn --red-orange">{{ course.title }}</button>
+                                    <a href="{% url 'course-detail3' course.title %}" class="educate__btn --red-orange">{{ course.title }}</a>
                                  </li>
                             {% endfor %}
                         </ul>
@@ -165,10 +127,10 @@
 
 {% block MyJS %}
     <!--  Библиотеки JS  -->
-    <script src="{% static 'main\js\libs\inputmask.min.js' %}"></script>
-    <script src="{% static 'main\js\libs\just-validate.min.js' %}"></script>
+    {% comment %} <script src="{% static 'main\js\libs\inputmask.min.js' %}"></script>
+    <script src="{% static 'main\js\libs\just-validate.min.js' %}"></script> {% endcomment %}
     <!-- Мой JS -->
-    <script src="{% static 'main\js\valid.js' %}"></script>
+    {% comment %} <script src="{% static 'main\js\valid.js' %}"></script> {% endcomment %}
     <script src="{% static 'main\js\modal-course.js' %}"></script>
 {% endblock %}
 

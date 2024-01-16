@@ -67,27 +67,27 @@ new JustValidate(".js-form-connection", {
 });
 
 $(document).ready(function () {
-//E-mail Ajax Send
-$(".form").submit(function () { //Change
-    if(!triggerForm){
-        return false;
-    }
-    var th = $(this);
-    $.ajax({
-        type: "POST",
-        url: "http://cz34920.tw1.ru/mail-connect.php", //Change
-        data: th.serialize()
-    }).done(function (e) {
-        console.log(e);
-        setTimeout(function () {
-            // Done Functions
-            th.trigger("reset");
-        }, 1000);
-    }).fail(function (error) {
-        console.log(error);
-    });
-    return false;
-});
+// //E-mail Ajax Send
+// $(".form").submit(function () { //Change
+//     if(!triggerForm){
+//         return false;
+//     }
+//     var th = $(this);
+//     $.ajax({
+//         type: "POST",
+//         url: "http://cz34920.tw1.ru/mail-connect.php", //Change
+//         data: th.serialize()
+//     }).done(function (e) {
+//         console.log(e);
+//         setTimeout(function () {
+//             // Done Functions
+//             th.trigger("reset");
+//         }, 1000);
+//     }).fail(function (error) {
+//         console.log(error);
+//     });
+//     return false;
+// });
 
 
 });

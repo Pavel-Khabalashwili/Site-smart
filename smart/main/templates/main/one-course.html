@@ -7,7 +7,16 @@
 
 
 {% block css %}
+
+    <!-- Animate.css -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- JustValidate -->
+    <link rel="stylesheet" href="{% static 'main\css\libs\justValidateTooltip.min.css' %}">
     <link rel="stylesheet" href="{% static 'main\css\main-tag\one-course.css' %}">
+    <link rel="stylesheet" href="{% static 'main\css\block\modal.css' %}">
     <link rel="stylesheet" href="{% static 'main\css\base\media.css' %}">
 {% endblock %}
 
@@ -38,9 +47,17 @@
                     </div>
                 </div>
 
+                {% include 'main/modal.html' %}
+
             </section>
         </main>
 {% endblock %}
 
 {% block MyJS %}
+    <!--  Библиотеки JS  -->
+    {% comment %} <script src="{% static 'main\js\libs\inputmask.min.js' %}"></script>
+    <script src="{% static 'main\js\libs\just-validate.min.js' %}"></script>
+    <!-- Мой JS -->
+    <script src="{% static 'main\js\valid.js' %}"></script> {% endcomment %}
+    <script src="{% static 'main\js\modal-1-course.js' %}"></script>
 {% endblock %}

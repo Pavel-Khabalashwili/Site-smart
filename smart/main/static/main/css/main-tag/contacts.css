@@ -72,7 +72,7 @@
     width: 1692px;
     height: 630px;
     z-index: -2;
-    background-image: url("../../img/contact-page/contacts-circle.svg");
+    /* background-image: url("../../img/contact-page/contacts-circle.svg"); */
 }
 
 .place__content {
