@@ -82,7 +82,7 @@
 	width: 822px;
 	height: 835px;
 	z-index: 1;
-	background-image: url("../../img/about-page/question-circles.svg");
+	/* background-image: url("../../img/about-page/question-circles.svg"); */
 }
 
 .questions__title{
@@ -93,7 +93,7 @@
 .question__bg{
 	background-image: url("../../img/about-page/question-bg.jpg");
 	background-repeat: no-repeat;
-	background-position: 123px -31px;
+	background-position: 0px -15px;
 	/* background-size: 43% 109%; */
 }
 

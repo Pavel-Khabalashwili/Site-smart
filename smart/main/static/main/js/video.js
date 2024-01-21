@@ -15,14 +15,14 @@ videoBtn.addEventListener('click', function () {
 
 	if (videoFile.paused) {
 		videoFile.play();
-		videoBtnIcon.src = '../img/about-page/pause-white.svg';
+		videoBtnIcon.src = '/static/main/img/about-page/pause-white.svg';
 
 		videoOverlay.onmouseleave = toggleOverlay;
 		videoOverlay.onmouseenter = toggleOverlay;
 
 	} else {
 		videoFile.pause();
-		videoBtnIcon.src = '../img/about-page/play-white.svg' ;
+		videoBtnIcon.src = '/static/main/img/about-page/play-white.svg' ;
 		videoOverlay.onmouseleave = null;
 		videoOverlay.onmouseenter = null;
 
